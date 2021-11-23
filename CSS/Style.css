@@ -1,0 +1,32 @@
+.invalid {
+  border: 2px solid red !important;
+}
+input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+}
+.icons {
+  display: none;
+}
+.task-box:hover .icons {
+  display: block;
+}
+
+.toast {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.not-found {
+  background-image: url("../img/404.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-position: top;
+  width: 100vw;
+  height: 100vh;
+}
+body a {
+  list-style: none;
+  text-decoration: none;
+}

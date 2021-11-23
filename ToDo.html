@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/44ca7cc454.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/bootstrap.css">
+    <link rel="stylesheet" href="./CSS/Style.css">
+    <title>To Do</title>
+</head>
+
+<body class="vh-100 d-flex justify-content-center align-items-center bg-info bg-opacity-10">
+    <div class="container d-flex flex-column h-100 justify-content-center align-items-center">
+        <nav class="nav nav-pills mt-3">
+            <li class="nav-item">
+                <a class="nav-link " href="HOME.html">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">ToDo</a>
+            </li>
+        </nav>
+
+
+        <div class="to-do-list w-100 h-100  text-center d-flex mt-3 align-items-center  flex-column">
+            <div
+                class="title mb-3 w-75 d-flex justify-content- justify-content-between align-items-center text-primary">
+                <div class="todo-icon">
+                    <i class="fas fa-check-square fa-2x"></i>
+                    <span class="fs-2 fw-bold ms-2">My Todo-s</span>
+                </div>
+                <span id="showPgNum" class="fs-4 text-primary d-flex"></span>
+            </div>
+
+            <div id="to-do-tasks" class="to-do-tasks w-75 d-flex flex-column overflow-auto" style="height: 27rem;">
+
+
+            </div>
+
+
+            <nav id="pagination-nav" aria-label="Page navigation example">
+                <ul class="pagination">
+                    <!-- <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous" onclick="prevPg()">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li> -->
+
+                    <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+
+                    <!-- <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next" onclick="nextPg()">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li> -->
+                </ul>
+            </nav>
+
+
+            <div id="delete-alert" class="delete-alert h-auto p-3 bg-warning rounded-3 d-none"
+                style="z-index: 1; position: absolute; top: 30vh; width: 33rem;">
+                <span class="fs-4">Do you want to delete this task?</span>
+                <div id="task-information" class="task-information d-flex flex-column justify-content-start my-4 mx-3">
+
+                </div>
+                <div class="buttons mt-3 d-flex justify-content-evenly ">
+                    <button id="access-btn" class="btn btn-lg btn-success text-white px-4" onclick="deleteTask(event)">YES</button>
+                    <BUtton id="denied-btn" class="btn btn-lg btn-danger text-white px-4" onclick="removeDeleteAlert()">NO</BUtton>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <script src="./JS/ToDo-Main.js"></script>
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+

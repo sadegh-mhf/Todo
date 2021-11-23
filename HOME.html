@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/44ca7cc454.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/bootstrap.css">
+    <link rel="stylesheet" href="./CSS/Style.css">
+    <title>HOME</title>
+</head>
+
+<body class="d-flex justify-content-center align-items-center bg-info bg-opacity-10">
+    <div class="container d-flex flex-column h-100 justify-content-center align-items-center">
+        <nav class="nav nav-pills mt-3">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ToDo.html">ToDo</a>
+            </li>
+        </nav>
+        <div class="to-do-list w-100 h-100  text-center d-flex pt-4 align-items-center  flex-column">
+
+            <form name="myForm" action="ToDo.html"
+                class="to-do-form text-center w-75 p-3 rounded-3 shadow bg-dark bg-opacity-10 m-2 d-flex flex-column justify-content-around align-items-center ">
+                <input type="text" id="title-input" placeholder="Add new Title *"
+                    class="w-100 form-control input-lg d-inline border-0 bg-light mt-4 mb-4 form-control-lg"
+                    autocomplete="off">
+                <div id="title-alert" class=" text-danger align-self-start m-0" style="display: none;">Title is required
+                </div>
+                <hr id="hor-line" class="w-100 m-2">
+
+                <textarea type="text" id="description-input" placeholder="Add new Description"
+                    class="w-100 form-control input-lg d-inline border-0 bg-light mt-4 mb-4 form-control-lg"
+                    autocomplete="off" rows="3"></textarea>
+
+                <hr id="hor-line" class="w-100 m-2">
+
+                <input type="date" id="date-input" placeholder="Add new Due Date *"
+                    class="w-100 form-control input-lg d-inline border-0 bg-light mt-4 mb-4 form-control-lg"
+                    autocomplete="off">
+                <div id="date-alert" class=" text-danger align-self-start m-0" style="display: none;">Due Date is
+                    required</div>
+
+                <button type="submit" id="add-btn" class="btn btn-primary w-25 py-2 px-4 fw-bold m-4">ADD</button>
+            </form>
+
+            <form name="myeditForm" action="ToDo.html"
+                class="to-do-form text-center w-75 p-3 rounded-3 shadow bg-dark bg-opacity-10 m-2 d-flex flex-column justify-content-around align-items-center d-none">
+                <input type="text" id="edit-title-input"
+                    class="w-100 form-control input-lg d-inline border-0 bg-light mt-4 mb-4 form-control-lg"
+                    autocomplete="off">
+
+                <hr id="hor-line" class="w-100 m-2">
+
+                <textarea type="text" id="edit-desc-input"
+                    class="w-100 form-control input-lg d-inline border-0 bg-light mt-4 mb-4 form-control-lg"
+                    autocomplete="off" rows="3"></textarea>
+
+                <hr id="hor-line" class="w-100 m-2">
+
+                <input type="date" id="edit-date-input"
+                    class="w-100 form-control input-lg d-inline border-0 bg-light mt-4 mb-4 form-control-lg"
+                    autocomplete="off">
+
+
+                <button type="submit" id="save-btn" class="btn btn-primary w-25 py-2 px-4 fw-bold m-4"
+                    onclick="saveEditedTask(event)">SAVE</button>
+            </form>
+
+        </div>
+    </div>
+
+
+    <div class="toast bg-success" id="submit-toast" style="width: 15rem;" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header d-flex justify-content-between">
+            <strong class="me-auto">Server message</strong>
+            <button type="button" class="btn-close m-1" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body text-light d-flex flex-column">
+            <span class="fs-5">Successful</span>
+            <hr class="m-2">
+            <span class="fs-6">Task submited successfully</span>
+        </div>
+    </div>
+
+    <div class="toast bg-success" id="edit-toast" style="width: 15rem;" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header d-flex justify-content-between">
+            <strong class="me-auto">Server message</strong>
+            <button type="button" class="btn-close m-1" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body text-light d-flex flex-column">
+            <span class="fs-5">Successful</span>
+            <hr class="m-2">
+            <span class="fs-6">Changes saved successfully</span>
+        </div>
+    </div>
+
+
+    <script src="./JS/Home-Main.js"></script>
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
